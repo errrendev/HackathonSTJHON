@@ -107,7 +107,7 @@ const DrawingCanvas = () => {
         setLoading(true);
 
         try {
-            const response = await fetch('http://localhost:9000/save-image', {
+            const response = await fetch('http://localhost:8000/save-image', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
