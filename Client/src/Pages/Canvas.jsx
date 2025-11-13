@@ -119,11 +119,9 @@ const DrawingCanvas = () => {
             if (response.ok) {
                 
                 resetCanvas();
-                if (result.expr && result.result) {
-                    setAnswer(`${result.expr}=${result.result}`); 
-                } else {
-                    console.error('Invalid response format:', result);
-                }
+              
+                    setAnswer(`${result.result}`); 
+               
             } else {
                 console.error('Failed to save image:', result.message);
             }
@@ -209,7 +207,7 @@ const DrawingCanvas = () => {
 
            
             {answer && (
-                <div className="absolute text-white text-[30px] font-bold" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
+                <div className="absolute text-white text-[20px] font-bold" style={{ left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}>
                     {answer}
                 </div>
             )}
