@@ -126,9 +126,7 @@ async def save_image(request: ImageRequest):
 
         math_prompt = """
         Analyze the image for math-related content:
-        1. Identify all expressions
-        2. Solve step-by-step
-        3. Give final answer
+        give solution in short and simple way and answer in paragraph not in steps
         """
 
         message = HumanMessage(
